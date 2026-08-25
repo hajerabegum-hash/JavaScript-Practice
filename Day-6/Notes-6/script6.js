@@ -319,7 +319,163 @@
 // need to create it - it's always available.
 
 // Examples:
-console.log("hello from tab");
-console.log("hello form computer");
-console.log("hello again from tab")
+// Examples:
 
+//Example 1: Math constants
+
+// console.log(Math.PI);
+// //output: 3.141592653589793
+
+// console.log(Math.E);
+// //output: 2.718281828459045
+
+// //Example 2: Absolute value
+
+// console.log(Math.abs(-42));
+// //output:42
+
+// console.log(Math.abs(15));
+// //output: 15
+// console.log(Math.abs(-7.5));
+// //output: 7.5
+
+// //Example 3: Power (exponentiation)
+
+// console.log(Math.pow(2, 3));
+// //output: 8
+
+// console.log(Math.pow(5, 2));
+// // output:25
+// console.log(Math.pow(10, 3));
+// // output:1000
+
+// //  Example 4: Rounding down and up
+
+// console.log(Math.floor(4.9));
+// // output:4
+
+// console.log(Math.floor(1.9));
+// // output:1
+
+// console.log(Math.ceil(1.9));
+// //output: 2
+
+// console.log(Math.ceil(4.9));
+// //output: 5
+
+// //Example 5: Using Math.PI for calculations
+// let radius = 5;
+// let circumference = 2 * Math.PI * radius;
+// let area = Math.PI * radius * radius;
+// console.log(circumference);
+// //output:31.4159265358979
+// console.log(area);
+// //output:78.53981633974483
+
+// //7.Math.random() - Generating Random Numbers
+// // Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).
+
+// // Examples:
+
+// // Example 1: Basic random decimal
+
+// console.log(Math.random());
+// console.log(Math.random());
+// console.log(Math.random());
+// // 0.6472... (different each time)
+//0.72037793230810
+//0.014008031273883503
+
+//// Example 2: Random decimal scaled to 10
+// let num = Math.random() * 10;
+// console.log(num);
+// //output: 4.637... (between 0 and 10)
+// let num = Math.random() * 100;
+// console.log(num);
+//output: 44.637... (between 0 and 100)
+
+//Example 3: Random decimal scaled to 100
+
+// let percentage = Math.random() * 100;
+// console.log(percentage);
+//output:80.46770949336694 (between 0 and 100)
+
+// Example 4: Multiple random numbers
+// console.log(Math.random() * 5);
+//output:2.396354329453339 (between 0 and 5) exclude 5
+// console.log(Math.random() * 20);
+// // output :14.4688896482835910 (between 0 and 20) exclude 20
+// console.log(Math.random() * 50);
+// //output :10.935920387028448 (between 0 and 50) exclude 50
+
+// Example 5: Understanding the range
+// console.log(Math.random());
+// //output: Could be: 0.000... to 0.999...
+
+// console.log(Math.random() * 10);
+
+// //output: Could be: 0.000... to 9.999...
+// console.log(Math.random() * 100);
+
+// //output: Could be: 0.000... to 99.999...
+
+/*8. Generating Random Integers
+
+To generate random integers within a specific range, use Math.random() with Math.floor() .
+
+Step-by-step process:
+
+1. Generate decimal: Math.random()
+2. Multiply by range size: * 10 (for 0-9)
+3. Round down: Math.floor()
+4. Add starting value: + 1 (for 1-10)*/
+
+// Examples:
+// // Example 1: Random integer from 1 to 10 (step by step)
+// let step1 = Math.random();
+// console.log(step1);
+
+// //output:0.2872969631922121 (could be 0-1 but exclude 1)
+// let step2 = step1 * 10;
+// console.log(step2);
+// //output:9.2872969631922121 (could be 0-10 but exclude 10)
+
+// let step3 = Math.floor(step2);
+// console.log(step3);
+
+// // /output:7.2872969631922121 (could be 0-10 but exclude 10)
+// let step4 = step3 + 1;
+// console.log(step4);
+
+// //Example 2: Random integer from 1 to 10 (one line)
+// // let random = Math.floor(Math.random() * 10) + 1;
+// // console.log(random);
+// // output: // Could be: 1, 2, 3, 4, 5, 6, 7, 8, 9, or 10
+
+// // Example 3: Random integer from 1 to 100
+// let random = Math.floor(Math.random() * 100) + 1;
+// console.log(random);
+// // output: // Could be: 1, 2, 3, 4, 5, 6, 7, 8, 9,......... 100
+// //
+// // //Example 4: Random integer from 1 to 6 (dice roll)
+
+// let diceRoll = Math.floor(Math.random() * 6) + 1;
+// console.log("you rolled dice:" + diceRoll);
+
+// // output: between 1 to 6
+
+// // Example 5: Random integer from 1 to 5
+
+// let rating = Math.floor(Math.random() * 5) + 1;
+// console.log("your rating is:" + rating);
+// //output:  1, 2, 3, 4, or 5
+
+//9. Random Number Formula
+// General Formula: Math.floor(Math.random() * (max - min + 1)) + min
+// This formula generates a random integer between min and max (both inclusive).
+
+// Example 1: Random number from 1 to 10
+
+let num = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+console.log(num);
+//output: 10

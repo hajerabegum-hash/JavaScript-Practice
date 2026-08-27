@@ -476,6 +476,71 @@ Step-by-step process:
 
 // Example 1: Random number from 1 to 10
 
-let num = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-console.log(num);
-//output: 10
+// let num1 = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+// console.log(num1);
+//output: 1 to 10 (random number between 1 to 10)
+// Simplifies to: Math.floor(Math.random() * 10) + 1
+
+// Example 2: Random number from 5 to 10
+
+// let num2 = Math.floor(Math.random() * (10 - 5 + 1)) + 5;
+// console.log(num2);
+//output: 1 to 10 (random number between 1 to 10)
+// Simplifies to: Math.floor(Math.random() * 6) + 5
+
+// Example 3: Random number from 50 to 100
+
+// let num3 = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+// console.log(num3);
+//output: 50 to 100 (random number between 50 to 100)
+// Simplifies to: Math.floor(Math.random() * 51) + 50
+
+// Example 4: Random number from 20 to 30
+
+// let num4 = Math.floor(Math.random() * (30 - 20 + 1)) + 20;
+// console.log(num4);
+//output: 20 to 30 (random number between 20 to 30)
+
+// Simplifies to: Math.floor(Math.random() * 11) + 20
+
+// Example 5: Random number from -10 to 10
+// let num5 = Math.floor(Math.random() * (10 - -10 + 1)) + -10;
+// console.log(num5);
+// /output: -10 to 10 (random number between -10 to 10)
+// Simplifies to: Math.floor(Math.random() * 21) - 10
+
+//10. Practical Random Number Applications
+// Using random numbers in real-world scenarios.
+
+// Examples:
+
+// Example 1: Random dice roll (1-6)
+
+// let dice = Math.floor(Math.random() * 6 - 1 + 1) + 1;
+// console.log("You Rolled:" + dice);
+//output: 1 to 6 (random number between 1 to 6)
+
+//// Example 2: Random choice from array
+// let colors = ["Red", "Blue", "Green", "Yellow"];
+// let randomIndex = Math.floor(Math.random() * colors.length);
+// console.log("Random color: " + colors[randomIndex]);
+//output: yellow (random color between red to yellow)
+
+// // Example 3: Random quiz question selector
+
+// let questions = ["Q1", "Q2", "Q3", "Q4", "Q5"];
+// let randomQ = Math.floor(Math.random() * questions.length);
+// console.log("your random questions is:" + questions[randomQ]);
+//output: Q2 (random question between Q1 to Q5)
+
+// Example 4: Random ID generator (1000-9999)
+
+let id = Math.floor(Math.random() * 9999) + 1000;
+console.log("Generated ID:" + id);
+
+//output: 4666 (random ID between 1000 to 9999)
+
+// Example 5: Random percentage (0-100)
+let percentage = Math.floor(Math.random() * 101);
+console.log("Random percentage:" + percentage + "%");
+//output:Random percentage:74% (random percentage between 0 to 100s)

@@ -497,3 +497,7 @@ Step-by-step process:
 //9. Random Number Formula
 // General Formula: Math.floor(Math.random() * (max - min + 1)) + min
 // This formula generates a random integer between min and max (both inclusive).
+
+// Example 1: Random number from 1 to 10
+
+let num=Math.floor(Math.)

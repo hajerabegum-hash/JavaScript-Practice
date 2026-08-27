@@ -535,12 +535,12 @@ Step-by-step process:
 
 // Example 4: Random ID generator (1000-9999)
 
-let id = Math.floor(Math.random() * 9999) + 1000;
-console.log("Generated ID:" + id);
+// let id = Math.floor(Math.random() * 9999) + 1000;
+// console.log("Generated ID:" + id);
 
 //output: 4666 (random ID between 1000 to 9999)
 
 // Example 5: Random percentage (0-100)
-let percentage = Math.floor(Math.random() * 101);
-console.log("Random percentage:" + percentage + "%");
-//output:Random percentage:74% (random percentage between 0 to 100s)
+// let percentage = Math.floor(Math.random() * 101);
+// console.log("Random percentage:" + percentage + "%");
+//output:Random percentage:74% (random percentage between 0 to 100)

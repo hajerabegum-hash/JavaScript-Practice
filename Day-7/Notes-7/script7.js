@@ -188,3 +188,241 @@ them to make your specific drink.*/
 // // Output: Hello, Alice
 // console.log(getGreeting("Bob"));
 // // Output: Hello, Bob
+
+//4 .UNDERSTANDING SCOPES
+
+//Scopes determines where variables can be accessed in your code
+
+//function scopes
+
+//variable declared inside a function cannot be accessed from outside that function
+
+//example: 1 Basic functions scope
+
+//6. function expression
+//A function can be stored inside a variable. This is called a function expression
+
+//examples
+// //example:1 Basic function expression
+// const multiply = function (a, b) {
+//   return a * b;
+// };
+// console.log(multiply(4, 6));
+// //output: 24
+// console.log(multiply(10, 6));
+//output: 60
+
+//2. example:function expressiom with greeting
+
+// const sayHi = function (name) {
+//   console.log("Hi," + name + "!");
+// };
+// sayHi("Tom");
+// //output: Hi, Tom!
+// sayHi("Jerry");
+//output: Hi, Jerry!
+
+//example:3 Arrow function (modern syntax)
+// const square = (num) => {
+//   return num * num;
+// };
+// console.log(square(5));
+// //output:25
+// console.log(square(10));
+// //output: 100
+
+//example:4 storing different functions:
+
+// const add = function (a, b) {
+//   return a + b;
+// };
+// const subtract = function (a, b) {
+//   return a - b;
+// };
+// console.log(add(10, 5));
+// //output:15
+// console.log(subtract(10, 5));
+// //output:5
+
+//7.  Higher-Order Functions
+//  Higher-Order Functions are funstions thar either accept other functions as argumentdor return functiond. Think of a manager - the manager does not do the basic work themselves. they take a worker (another function ) and tell them tp do the work.
+
+//examples
+
+// //example-1: function accept another function
+// function repatTask(func, n) {
+//   for (let i = 0; i < n; i++) {
+//     func();
+//   }
+// }
+// const alertUser = () => {
+//   console.log("Alert!");
+// };
+// repatTask(alertUser, 3);
+//output: Alert!
+//output: Alert!
+//output: Alert!
+
+// example:2 Apply discount price
+
+// function applyDiscount(price, discountFunc) {
+//   return discountFunc(price);
+// }
+// const tenPercent = (price) => price * 0.9;
+// console.log(applyDiscount(100, tenPercent));
+// //output: 90
+// const twentyPercent = (price) => price * 0.8;
+// console.log(applyDiscount(100, twentyPercentPercent));
+// //output: 80
+
+//Example 3: Execute different operations
+
+// function calculate(a, b, operation) {
+//   return operation(a, b);
+// }
+// const add = (x, y) => x + y;
+// const multiply = (x, y) => x * y;
+// console.log(calculate(5, 3, add));
+// // Output: 8
+// console.log(calculate(5, 3, multiply));
+// // Output: 15
+
+// Example 4: Process array elements
+
+// function processArray(arr, processor) {
+// for (let i = 0; i < arr.length; i++) {
+// processor(arr[i]);
+// }
+// }
+// const printDouble = (num) => {
+// console.log(num * 2);
+// };
+// processArray([1, 2, 3], printDouble);
+// // Output:
+// 2
+// 4
+// 6
+
+// 8. Methods
+
+// Methods are functions that are defined as properties inside an object. Think of a smartphone - the phone is the
+// object, and its apps (Camera, Music, Settings) are the methods - actions the phone can perform.
+
+//Traditional Syntax
+
+// const car = {
+//   brand: "tesla",
+//   start: function () {
+//     console.log("Engine on");
+//   },
+//   stop: function () {
+//     console.log("Engine off");
+//   },
+// };
+// car.start();
+// // Output: Engine on
+// car.stop();
+// Output: Engine off
+
+// Modern Shorthand Syntax (Preferred)
+
+// const mathTools = {
+//   add(a, b) {
+//     return a + b;
+//   },
+//   subtract(a, b) {
+//     return a - b;
+//   },
+// };
+// console.log(mathTools.add(5, 3));
+// // Output: 8
+// console.log(mathTools.subtract(10, 4));
+// // Output: 6
+//Examples
+// Example 1: Calculator object
+// const calculator = {
+//   add(a, b) {
+//     return a + b;
+//   },
+//   multiply(a, b) {
+//     return a * b;
+//   },
+// };
+// console.log(calculator.add(10, 5));
+// // Output: 15
+// console.log(calculator.multiply(4, 7));
+// // Output: 28
+
+//Example 2: Person object with methods
+
+// const person = {
+//   name: "Alice",
+//   greet() {
+//     console.log("Hello, I am " + this.name);
+//   },
+//   sayAge(age) {
+//     console.log("I am " + age + " years old");
+//   },
+// };
+// person.greet();
+// // Output: Hello, I am Alice
+// person.sayAge(25);
+// // Output: I am 25 years old
+
+// Example 3: Bank account object
+
+// const account = {
+//   balance: 1000,
+//   deposit(amount) {
+//     this.balance = this.balance + amount;
+//     console.log("New balance: " + this.balance);
+//   },
+//   withdraw(amount) {
+//     this.balance = this.balance - amount;
+//     console.log("New balance: " + this.balance);
+//   },
+// };
+// account.deposit(500);
+//  // Output: New balance: 1500
+// account.withdraw(200);
+// Output: New balance: 1300
+
+//Example 4: String formatter object
+
+// const formatter = {
+//   toUpper(str) {
+//     return str.toUpperCase();
+//   },
+//   toLower(str) {
+//     return str.toLowerCase();
+//   },
+//   trim(str) {
+//     return str.trim();
+//   },
+// };
+// console.log(formatter.toUpper("hello"));
+// // Output: HELLO
+// console.log(formatter.toLower("WORLD"));
+//  // Output: world
+// console.log(formatter.trim(" spaces "));
+// // Output: spaces
+
+//Example 5: Counter object
+
+// const counter = {
+//   count: 0,
+//   increment() {
+//     this.count++;
+//     console.log("Count: " + this.count);
+//   },
+//   reset() {
+//     this.count = 0;
+//     console.log("Counter reset");
+//   },
+// };
+// counter.increment();
+// // Output: Count: 1
+// counter.increment();
+// // Output: Count: 2
+// counter.reset();
+// Output: Counter reset

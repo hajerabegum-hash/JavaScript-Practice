@@ -42,11 +42,6 @@
 //   console.log("I m learning JavaScript");
 // }
 // myIntroduction();
-// Section 2: Functions with Arguments
-
-// Q1. Create a function called multiplyThree that accepts three numbers as arguments and prints their product.
-// Example:
-// function multiplyThree
 
 // function infoPrint(name) {
 //   console.log("my name is" + name);
@@ -63,3 +58,9 @@
 // infoPrint(student1.name);
 // infoPrint(student1.age);
 // infoPrint(student1.course);
+
+// Section 2: Functions with Arguments
+
+// Q1. Create a function called multiplyThree that accepts three numbers as arguments and prints their product.
+// Example:
+// function multiplyThree

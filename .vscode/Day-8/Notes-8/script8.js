@@ -45,6 +45,14 @@
 //Example 2: Bank Account
 
 const account = {
-  holder: sarah,
+  holder: "sarah",
   balance: 5000,
+  deposite(amount) {
+    this.balance += amount;
+    console.log(
+      `${this.holder} deposite$ ${amount}. New balance $ ${this.balance}`,
+    );
+  },
 };
+account.deposite(500);
+//output:Sarah deposited $500. New balance: $5500
